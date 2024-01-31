@@ -29,6 +29,7 @@ pipeline {
             steps {
                 sh "echo 'hola-mundo'"
                 sh "echo '$USER_MASTER'"
+                sh "echo 'PROBANDO CICD'"
             }
             
         }
