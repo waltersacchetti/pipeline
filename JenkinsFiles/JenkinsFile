@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAM_WS="@WALTERSACCHETTI"
+    }
+    
+    stages{
+        stage ("Saludos 1") {
+            steps {
+                echo "Hola Desde Saludo 1"
+            }
+        }
+        stage("Saludos 2") {
+            steps {
+                echo "Hola desde el stage Saludos 2 paso 1"
+                echo "Hola desde el stage Saludos 2, paso 2"
+                
+            }
+        }
+        stage("IMPRIMIR") {
+            steps {
+                echo "${env.INSTAGRAM_WS}"
+                echo "Acabo de imprimir una variable de entorno"
+                echo "$INSTAGRAM_WS"
+                
+            }
+        }  
+    }
+    
+    
+    
+}
